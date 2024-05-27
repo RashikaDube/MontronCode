@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="165" id="lJs-ky-hbO" userLabel="TableViewCell" customClass="TableViewCell" customModule="MontronCode" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="485" height="165"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lJs-ky-hbO" id="mmy-TJ-s44" userLabel="ContentView">
+                <rect key="frame" x="0.0" y="0.0" width="485" height="165"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mqo-cq-CTP" userLabel="HeaderView">
+                        <rect key="frame" x="0.0" y="0.0" width="485" height="165"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lXW-ug-Eku" userLabel="HeaderSeparator">
+                                <rect key="frame" x="15" y="10" width="455" height="1.6666666666666661"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="9RC-wJ-ykv"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ixm-OE-Ugx">
+                                <rect key="frame" x="16" y="21.666666666666671" width="453" height="133.33333333333331"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iY2-ub-1HK" userLabel="PetImage">
+                                        <rect key="frame" x="5" y="13.333333333333329" width="110" height="107"/>
+                                        <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="110" id="Y0m-9g-bkk"/>
+                                            <constraint firstAttribute="width" secondItem="iY2-ub-1HK" secondAttribute="height" multiplier="1:1" id="g4d-Q8-5BW"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mR5-jA-R9z" userLabel="PetName">
+                                        <rect key="frame" x="135" y="56.333333333333336" width="183" height="20.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-CondensedBold" family="Helvetica Neue" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="mR5-jA-R9z" firstAttribute="centerY" secondItem="ixm-OE-Ugx" secondAttribute="centerY" id="3xe-Dl-MJy"/>
+                                    <constraint firstItem="mR5-jA-R9z" firstAttribute="leading" secondItem="iY2-ub-1HK" secondAttribute="trailing" constant="20" id="PXJ-67-Qoc"/>
+                                    <constraint firstItem="mR5-jA-R9z" firstAttribute="centerX" secondItem="ixm-OE-Ugx" secondAttribute="centerX" id="RkP-lw-omL"/>
+                                    <constraint firstItem="iY2-ub-1HK" firstAttribute="centerY" secondItem="ixm-OE-Ugx" secondAttribute="centerY" id="Wrl-n0-TSg"/>
+                                    <constraint firstItem="iY2-ub-1HK" firstAttribute="leading" secondItem="ixm-OE-Ugx" secondAttribute="leading" constant="5" id="Zaj-1s-c3N"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lXW-ug-Eku" secondAttribute="trailing" constant="15" id="3Yb-S5-8Sh"/>
+                            <constraint firstItem="ixm-OE-Ugx" firstAttribute="leading" secondItem="Mqo-cq-CTP" secondAttribute="leading" constant="16" id="AS1-L6-KFy"/>
+                            <constraint firstAttribute="bottom" secondItem="ixm-OE-Ugx" secondAttribute="bottom" constant="10" id="NdQ-v0-mm5"/>
+                            <constraint firstItem="lXW-ug-Eku" firstAttribute="leading" secondItem="Mqo-cq-CTP" secondAttribute="leading" constant="15" id="NeF-vF-rhj"/>
+                            <constraint firstItem="ixm-OE-Ugx" firstAttribute="top" secondItem="lXW-ug-Eku" secondAttribute="bottom" constant="10" id="S45-ka-PAe"/>
+                            <constraint firstItem="lXW-ug-Eku" firstAttribute="top" secondItem="Mqo-cq-CTP" secondAttribute="top" constant="10" id="Twq-2c-BBS"/>
+                            <constraint firstAttribute="trailing" secondItem="ixm-OE-Ugx" secondAttribute="trailing" constant="16" id="aBk-vt-fMI"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Mqo-cq-CTP" firstAttribute="top" secondItem="mmy-TJ-s44" secondAttribute="top" id="HZe-iI-fDJ"/>
+                    <constraint firstAttribute="bottom" secondItem="Mqo-cq-CTP" secondAttribute="bottom" id="Z3o-BQ-Iyk"/>
+                    <constraint firstAttribute="trailing" secondItem="Mqo-cq-CTP" secondAttribute="trailing" id="k3N-LR-gIo"/>
+                    <constraint firstItem="Mqo-cq-CTP" firstAttribute="leading" secondItem="mmy-TJ-s44" secondAttribute="leading" id="nCc-p7-NNz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="s9J-q4-Kj5"/>
+            <connections>
+                <outlet property="petImageView" destination="iY2-ub-1HK" id="hkn-cw-duN"/>
+                <outlet property="petNameLabel" destination="mR5-jA-R9z" id="Njr-ri-Wsm"/>
+            </connections>
+            <point key="canvasLocation" x="193" y="-150"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="photo.fill" catalog="system" width="128" height="93"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
