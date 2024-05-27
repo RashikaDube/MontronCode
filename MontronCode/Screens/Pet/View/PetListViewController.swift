@@ -92,14 +92,15 @@ class PetListViewController: UIViewController {
     extension PetListViewController: UITableViewDelegate, UITableViewDataSource {
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return viewModel.petsData.count
+            return viewModel.petsArrayData.count
         }
         
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {            guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.tableViewCell, for: indexPath) as? TableViewCell else {
+        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {     
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: Identifier.tableViewCell, for: indexPath) as? TableViewCell else {
                 return UITableViewCell()
         }
             
-            let petData = viewModel.petsData[indexPath.row]
+            let petData = viewModel.petsArrayData[indexPath.row]
             cell.petNameLabel.text = petData.title ?? ""
             cell.configure(with: petData.imageUrl ?? "")
             cell.backgroundColor = .red
@@ -116,7 +117,7 @@ class PetListViewController: UIViewController {
                 return UIView()
             }
             
-            header.headerLabel.text = "Office Hours: \(viewModel.configData.settingsModel?.workHours ?? "M-F 9:00 - 18:00")"
+            header.headerLabel.text = "Office Hours: \(viewModel.configArrData.settingsModel?.workHours ?? "M-F 9:00 - 18:00")"
             return header
         }
         
@@ -125,7 +126,7 @@ class PetListViewController: UIViewController {
         }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-            guard let webUrl = viewModel.petsData[indexPath.row].contentUrl else {
+            guard let webUrl = viewModel.petsArrayData[indexPath.row].contentUrl else {
                 print("Content URL is nil")
                 return
             }

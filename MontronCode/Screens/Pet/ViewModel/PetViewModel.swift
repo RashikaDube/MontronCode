@@ -21,8 +21,8 @@ class PetViewModel {
     
     // MARK: - Properties
     
-    var petsData: [PetModel] = []
-    var configData: ConfigDataModel = ConfigDataModel()
+    var petsArrayData: [PetModel] = []
+    var configArrData: ConfigDataModel = ConfigDataModel()
     var eventHandler: ((_ event: Event) -> Void)?
     
     // MARK: - Fetch Methods
@@ -36,7 +36,7 @@ class PetViewModel {
             
             switch result {
             case .success(let petData):
-                self.petsData = petData.pets ?? []
+                self.petsArrayData = petData.pets ?? []
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 self.eventHandler?(.error(error))
@@ -53,7 +53,7 @@ class PetViewModel {
 
             switch result {
             case .success(let configData):
-                self.configData = configData
+                self.configArrData = configData
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 self.eventHandler?(.error(error))
