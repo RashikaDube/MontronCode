@@ -21,8 +21,8 @@ class PetViewModel {
     
     // MARK: - Properties
     
-    var petsArrayData: [PetModel] = []
-    var configArrData: ConfigDataModel = ConfigDataModel()
+    var petsData: [PetModel] = []
+    var settings: Settings?
     var eventHandler: ((_ event: Event) -> Void)?
     
     // MARK: - Fetch Methods
@@ -36,7 +36,7 @@ class PetViewModel {
             
             switch result {
             case .success(let petData):
-                self.petsArrayData = petData.pets ?? []
+                self.petsData = petData.pets ?? []
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 self.eventHandler?(.error(error))
@@ -49,11 +49,11 @@ class PetViewModel {
             return
         }
         
-        APIManager.shared.fetch(petFrom: configUrl) { (result: Result<ConfigDataModel, DataError>) in
+        APIManager.shared.fetch(petFrom: configUrl) { (result: Result<ResponseData, DataError>) in
 
             switch result {
-            case .success(let configData):
-                self.configArrData = configData
+            case .success(let responseData):
+                self.settings = responseData.settings
                 self.eventHandler?(.dataLoaded)
             case .failure(let error):
                 self.eventHandler?(.error(error))

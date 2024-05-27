@@ -102,8 +102,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="kL2-QQ-nmO"/>
                     <connections>
-                        <outlet property="callingButton" destination="Ubx-9o-zke" id="v6e-ue-cm5"/>
-                        <outlet property="chattingButton" destination="oUF-KI-mQh" id="7wq-LA-EeN"/>
+                        <outlet property="callingButton" destination="oUF-KI-mQh" id="Phl-9x-2C0"/>
+                        <outlet property="chattingButton" destination="Ubx-9o-zke" id="8oL-X0-WS1"/>
                         <outlet property="tableView" destination="TDA-ii-aE9" id="Fbt-qP-EE2"/>
                         <segue destination="Q3r-Ru-EW4" kind="custom" identifier="identifier" id="mRX-au-NbW"/>
                     </connections>

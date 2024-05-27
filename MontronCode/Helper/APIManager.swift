@@ -23,7 +23,6 @@ class APIManager {
     // MARK: Singleton Instance
     
     static let shared = APIManager()
-    private init() {}
     
     // MARK: Public Methods
     

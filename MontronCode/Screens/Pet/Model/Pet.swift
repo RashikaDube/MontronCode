@@ -27,16 +27,16 @@ struct PetModel: Decodable {
     }
 }
 
-// MARK: - Configuration Data Model
+// MARK: - Response Data Model
 
-struct ConfigDataModel: Decodable {
-    var settingsModel: SettingsModel?
+struct ResponseData: Codable {
+    let settings: Settings
 }
 
-// MARK: - Settings Model
+ // MARK: - Settings Model
 
-struct SettingsModel: Decodable {
-    let isChatEnabled: Bool?
-    let isCallEnabled: Bool?
-    let workHours: String?
+struct Settings: Codable {
+    let isChatEnabled: Bool
+    let isCallEnabled: Bool
+    let workHours: String
 }
